@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://byc2g46y7i0iu"]
+
+[ext_resource type="Texture2D" uid="uid://cf3v6ury5oeby" path="res://assets/true_judgement_bar.png" id="1_j4ytx"]
+
+[node name="judgementbar" type="Sprite2D"]
+texture = ExtResource("1_j4ytx")

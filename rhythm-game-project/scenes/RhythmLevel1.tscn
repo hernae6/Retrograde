@@ -1,0 +1,43 @@
+[gd_scene load_steps=9 format=3 uid="uid://bdu4w8m3ykaf1"]
+
+[ext_resource type="Script" uid="uid://c6sqyomugmxcu" path="res://scenes/rhythm_level_1.gd" id="1_o8rng"]
+[ext_resource type="PackedScene" uid="uid://byc2g46y7i0iu" path="res://objects/judgementbar.tscn" id="1_y1ygj"]
+[ext_resource type="Script" uid="uid://bkuudhvnr5xxt" path="res://objects/judgementbar.gd" id="2_p3qtt"]
+[ext_resource type="Texture2D" uid="uid://dsnape3nysd8r" path="res://assets/Rhythm_bckgrnd_img.png" id="2_x01jv"]
+[ext_resource type="PackedScene" uid="uid://berejb2soseak" path="res://objects/chartnote.tscn" id="3_07tvl"]
+[ext_resource type="PackedScene" uid="uid://0xiochr4jrh" path="res://scenes/score_ui.tscn" id="5_65ukx"]
+[ext_resource type="Script" uid="uid://dh6u5v2tvqeea" path="res://scenes/score_ui.gd" id="6_cvvgr"]
+[ext_resource type="AudioStream" uid="uid://dawhxdpbvmsvw" path="res://assets/You Should Know.wav" id="8_q3d5j"]
+
+[node name="RhythmLevel1" type="Node2D"]
+script = ExtResource("1_o8rng")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.7500273, 1.2500234)
+scale = Vector2(0.6007812, 0.600463)
+texture = ExtResource("2_x01jv")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="judgementbar" parent="." instance=ExtResource("1_y1ygj")]
+position = Vector2(-545, -87)
+scale = Vector2(0.8, 0.8)
+script = ExtResource("2_p3qtt")
+key_name = "button_space"
+swap_key = "button_a"
+
+[node name="chartnote" parent="." instance=ExtResource("3_07tvl")]
+visible = false
+position = Vector2(438.00003, -86.74999)
+scale = Vector2(0.08582122, 9.392858)
+
+[node name="chartnote2" parent="." instance=ExtResource("3_07tvl")]
+visible = false
+position = Vector2(438, 102)
+scale = Vector2(0.086, 9.393)
+
+[node name="ScoreUI" parent="." instance=ExtResource("5_65ukx")]
+script = ExtResource("6_cvvgr")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_q3d5j")

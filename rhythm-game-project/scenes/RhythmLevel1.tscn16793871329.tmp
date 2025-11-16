@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdu4w8m3ykaf1"]
+
+[ext_resource type="PackedScene" uid="uid://byc2g46y7i0iu" path="res://objects/judgementbar.tscn" id="1_y1ygj"]
+[ext_resource type="Script" uid="uid://bkuudhvnr5xxt" path="res://objects/judgementbar.gd" id="2_p3qtt"]
+[ext_resource type="PackedScene" uid="uid://berejb2soseak" path="res://objects/chartnote.tscn" id="3_07tvl"]
+
+[node name="RhythmLevel1" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="judgementbar" parent="." instance=ExtResource("1_y1ygj")]
+position = Vector2(-141, 143)
+scale = Vector2(0.44434762, 0.9261408)
+script = ExtResource("2_p3qtt")
+key_name = "button_a"
+
+[node name="judgementbar2" parent="." instance=ExtResource("1_y1ygj")]
+position = Vector2(141, 143)
+scale = Vector2(0.44434762, 0.9261408)
+script = ExtResource("2_p3qtt")
+key_name = "button_space"
+
+[node name="chartnote" parent="." instance=ExtResource("3_07tvl")]
+position = Vector2(-141, -376)
+scale = Vector2(0.41044778, 0.8928557)
+assigned_key = "button_a"
+
+[node name="chartnote2" parent="." instance=ExtResource("3_07tvl")]
+position = Vector2(141, -376)
+scale = Vector2(0.41044778, 0.8928557)

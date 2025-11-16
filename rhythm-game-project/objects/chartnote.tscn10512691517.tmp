@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://berejb2soseak"]
+
+[ext_resource type="Texture2D" uid="uid://dmf3sw0qksa4h" path="res://assets/chart_note_placeholder.png" id="1_0howm"]
+[ext_resource type="Script" uid="uid://dg6kv8q45fbtx" path="res://objects/chartnote.gd" id="2_1foat"]
+
+[node name="chartnote" type="Sprite2D"]
+texture = ExtResource("1_0howm")
+script = ExtResource("2_1foat")
