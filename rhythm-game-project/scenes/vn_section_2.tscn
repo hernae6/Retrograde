@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://omntr3mex2of"]
+[gd_scene load_steps=7 format=3 uid="uid://omntr3mex2of"]
 
 [ext_resource type="Script" uid="uid://borplff7ugu5w" path="res://scenes/vn_section_2.gd" id="1_40ybd"]
 [ext_resource type="Texture2D" uid="uid://csp2k3sc1l5dr" path="res://assets/vn2_cg1_flip.png" id="2_5ln03"]
 [ext_resource type="Texture2D" uid="uid://cseovuxvxrlfn" path="res://assets/vn2_cg2.png" id="3_5ln03"]
 [ext_resource type="Texture2D" uid="uid://dgslxcriu1ku5" path="res://assets/new_text_box.png" id="4_5ln03"]
+[ext_resource type="AudioStream" uid="uid://dxkpeg6b4h5lg" path="res://assets/We Searched.wav" id="5_c37ad"]
+[ext_resource type="Texture2D" uid="uid://2iofxf5av7yx" path="res://assets/text_box.png" id="5_joly4"]
 
 [node name="vn_section_2" type="Node2D"]
 script = ExtResource("1_40ybd")
@@ -45,25 +47,26 @@ texture = ExtResource("4_5ln03")
 offset_left = -806.04694
 offset_top = 174.92958
 offset_right = 792.31866
-offset_bottom = 387.88727
+offset_bottom = 433.52118
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/normal_font_size = 60
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Name_box" type="Sprite2D" parent="."]
 position = Vector2(210.9375, 332.50003)
 scale = Vector2(0.13326822, 0.18981485)
-texture = ExtResource("4_5ln03")
+texture = ExtResource("5_joly4")
 
 [node name="Namebox_text" type="RichTextLabel" parent="Name_box"]
-offset_left = -817.4304
-offset_top = 160.68279
-offset_right = 788.35376
-offset_bottom = 418.82916
+offset_left = -802.4231
+offset_top = 134.34132
+offset_right = 803.3611
+offset_bottom = 476.78015
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 130
+theme_override_font_sizes/normal_font_size = 140
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_c37ad")

@@ -7,7 +7,7 @@ var cg_text = [
 ["Antonio","Lori that's bullshit and you know it!"],
 ["Lori","Nah nah nah I swear to God, man, I was shotgun with Clarisse and we was rollin' up Seventeenth-"],
 ["Eddie", "Where they got the old pharmacy?"],
-["Lori","Yeah, yeah, that Seventeenth. Seventeenth and Folsom"],
+["Lori","Yeah, yeah, that Seventeenth. Seventeenth and Folsom."],
 ["Lori","We was, like, pullin' up to a light when all of a sudden some dude is just fuckin' saunterin' towards us with his junk out!"],
 ["Eddie","(laughing) There's no fucking way."],
 ["Antonio","Holy shit, (laughs) that's decroded."],
@@ -32,7 +32,7 @@ var cg_text = [
 ["Lori","I woulda had ya even if ya didn't introduce me, dumbass."],
 ["Eddie","You're the best, Lori."],
 ["Lori","Yeah yeah yeah, whatever man. Love ya too."],
-["Antonio","You need a ride, Lori"],
+["Antonio","You need a ride, Lori?"],
 ["Eddie","Hang on, Tony."],
 ["Antonio","What's good?"],
 ["Eddie","Got a light?"],
@@ -70,7 +70,7 @@ var cg_text = [
 ["Eddie","(laughs) Yeah, I guess so, yeah."],
 ["Antonio","So... Edukation's back?"],
 ["Eddie","I'm thinkin' I'm back."],
-["Antonio","'Bout fuckin' time."]
+["Antonio","'Bout fuckin' time."], ["",""]
 ]
 
 # Called when the node enters the scene tree for the first time.
@@ -80,10 +80,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if progress_counter == 39:
+	if progress_counter == 38:
 		$CG1.visible = false
 		$CG2.visible = true
-	if progress_counter == 66:
+	if progress_counter == 67:
 		get_tree().change_scene_to_file("res://scenes/main.tscn")
 	
 	$Textbox_background/Textbox_text.text = cg_text[progress_counter][1]

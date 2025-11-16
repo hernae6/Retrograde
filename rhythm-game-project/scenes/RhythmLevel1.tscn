@@ -31,12 +31,12 @@ swap_key = "button_a"
 [node name="chartnote" parent="." instance=ExtResource("3_07tvl")]
 visible = false
 position = Vector2(438.00003, -86.74999)
-scale = Vector2(0.08582122, 9.392858)
+offset = Vector2(51.02, 80.43)
 
 [node name="chartnote2" parent="." instance=ExtResource("3_07tvl")]
 visible = false
 position = Vector2(438, 102)
-scale = Vector2(0.086, 9.393)
+offset = Vector2(51.02, 80.43)
 
 [node name="ScoreUI" parent="." instance=ExtResource("5_65ukx")]
 script = ExtResource("6_cvvgr")

@@ -14,9 +14,9 @@ func _process(delta):
 	if Input.is_action_just_pressed(start_key):
 		get_tree().change_scene_to_file("res://scenes/vn_section_1.tscn")
 		#get_tree().change_scene_to_file("res://scenes/RhythmLevel1.tscn")
-	elif Input.is_action_just_pressed(debug1):
-		get_tree().change_scene_to_file("res://scenes/RhythmLevel1.tscn")
-	elif Input.is_action_just_pressed(debug2):
-		get_tree().change_scene_to_file("res://scenes/vn_section_2.tscn")
+	#elif Input.is_action_just_pressed(debug1):
+	#	get_tree().change_scene_to_file("res://scenes/RhythmLevel1.tscn")
+	#elif Input.is_action_just_pressed(debug2):
+	#	get_tree().change_scene_to_file("res://scenes/vn_section_2.tscn")
 		
 		
