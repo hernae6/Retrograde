@@ -8,13 +8,16 @@ var music1 = [Vector2(-1, 0), Vector2(1, 96), Vector2(1, 240), Vector2(1, 288), 
 func _ready():
 	#Signalbus.connect("instantiate_note", _instantiate_new_note)
 	_begin_playblack()
+	
+func _delay():
+	await get_tree().create_timer(1.866).timeout
+	get_node("AudioStreamPlayer").play()
 
 func _begin_playblack():
 	var temp_y_side = music1[0].x
 	_instantiate_new_note(temp_y_side)
 	#print("Timestamp 1: " + str(Time.get_ticks_msec()))
-	await get_tree().create_timer(1.951).timeout
-	get_node("AudioStreamPlayer").play()
+	_delay()
 	for i in range(music1.size() - 1):
 		await get_tree().create_timer(_difference_play(i)).timeout
 		temp_y_side = music1[i].x

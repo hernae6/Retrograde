@@ -1,6 +1,6 @@
 extends Sprite2D
 
-var note_speed = 8.0
+var note_speed = 500.0
 var init_x_pos = 438.0
 
 signal incr_score
@@ -18,7 +18,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 #	# where Vector2 is basically a 2D point's coordinates 
-	position += Vector2(-note_speed, 0)
+	position += Vector2(-note_speed * delta, 0)
 
 	if position.x < -700:
 		#print("FUUUUUUUUCKKKKKKKKKKKKKK")
@@ -28,7 +28,7 @@ func _timingcheck(bar_side):
 	#print(key_pressed + " got pressed!")
 	
 	if bar_side == -1 && position.y < 1:
-		if position.x > -585.0 && position.x < -505.0:
+		if position.x > -585.0 && position.x < -480.0:
 			#print("Timestamp 2: " + str(Time.get_ticks_msec()))
 			print("achieved timing on side " + str(bar_side))
 			#incr_score.emit()
@@ -37,7 +37,7 @@ func _timingcheck(bar_side):
 			queue_free()
 	
 	elif bar_side == 1 && position.y > 1:
-		if position.x > -585.0 && position.x < -505.0:
+		if position.x > -585.0 && position.x < -480.0:
 			print("achieved timing on side " + str(bar_side))
 			Signalbus.emit_signal("incr_score")
 			queue_free()
