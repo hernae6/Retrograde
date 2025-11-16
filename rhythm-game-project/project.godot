@@ -15,9 +15,21 @@ run/main_scene="uid://cyq4crhpvnucq"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[audio]
+
+driver/output_latency=10
+
 [autoload]
 
 Signalbus="*res://Signalbus.gd"
+
+[display]
+
+window/size/maximize_disabled=true
+window/size/window_width_override=1728
+window/size/window_height_override=972
+window/stretch/scale=1.5
+window/vsync/vsync_mode=0
 
 [input]
 
