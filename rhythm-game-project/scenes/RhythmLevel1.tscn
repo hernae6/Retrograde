@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bdu4w8m3ykaf1"]
+[gd_scene load_steps=11 format=3 uid="uid://bdu4w8m3ykaf1"]
 
 [ext_resource type="Script" uid="uid://c6sqyomugmxcu" path="res://scenes/rhythm_level_1.gd" id="1_o8rng"]
 [ext_resource type="PackedScene" uid="uid://byc2g46y7i0iu" path="res://objects/judgementbar.tscn" id="1_y1ygj"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://0xiochr4jrh" path="res://scenes/score_ui.tscn" id="5_65ukx"]
 [ext_resource type="Script" uid="uid://dh6u5v2tvqeea" path="res://scenes/score_ui.gd" id="6_cvvgr"]
 [ext_resource type="AudioStream" uid="uid://dawhxdpbvmsvw" path="res://assets/You Should Know.wav" id="8_q3d5j"]
+[ext_resource type="PackedScene" path="res://scenes/gpu_particles_2d.tscn" id="9_px0g2"]
+[ext_resource type="Texture2D" uid="uid://d0uw63fg5f4op" path="res://assets/WhiteSquareTexture.png" id="10_ga54o"]
 
 [node name="RhythmLevel1" type="Node2D"]
 script = ExtResource("1_o8rng")
@@ -41,3 +43,7 @@ script = ExtResource("6_cvvgr")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_q3d5j")
+
+[node name="GPUParticles2D" parent="." instance=ExtResource("9_px0g2")]
+visible = false
+texture = ExtResource("10_ga54o")

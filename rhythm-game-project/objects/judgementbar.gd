@@ -38,8 +38,8 @@ func _process(delta):
 		#position.x *= -1
 		print(swap_side)
 		
-	if Input.is_action_just_pressed("button_d"):
-		_create_chartnote()
+	#if Input.is_action_just_pressed("button_d"):
+	#	_create_chartnote()
 
 func _create_chartnote():
 	#Signalbus.emit_signal("instantiate_note", swap_side)

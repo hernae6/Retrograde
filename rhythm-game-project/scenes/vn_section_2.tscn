@@ -1,21 +1,69 @@
-[gd_scene load_steps=2 format=3 uid="uid://omntr3mex2of"]
+[gd_scene load_steps=5 format=3 uid="uid://omntr3mex2of"]
 
 [ext_resource type="Script" uid="uid://borplff7ugu5w" path="res://scenes/vn_section_2.gd" id="1_40ybd"]
+[ext_resource type="Texture2D" uid="uid://csp2k3sc1l5dr" path="res://assets/vn2_cg1_flip.png" id="2_5ln03"]
+[ext_resource type="Texture2D" uid="uid://cseovuxvxrlfn" path="res://assets/vn2_cg2.png" id="3_5ln03"]
+[ext_resource type="Texture2D" uid="uid://dgslxcriu1ku5" path="res://assets/new_text_box.png" id="4_5ln03"]
 
 [node name="vn_section_2" type="Node2D"]
 script = ExtResource("1_40ybd")
+start_key = "button_space"
 
 [node name="Control" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Control"]
+visible = false
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control/CanvasLayer"]
+visible = false
 offset_right = 305.0
 offset_bottom = 100.0
 text = "FUCK YOU BUDDY"
+
+[node name="CG1" type="Sprite2D" parent="."]
+position = Vector2(576.50006, 324.5)
+scale = Vector2(0.5994792, 0.600926)
+texture = ExtResource("2_5ln03")
+
+[node name="CG2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(576, 323.5)
+scale = Vector2(0.6, 0.6009259)
+texture = ExtResource("3_5ln03")
+
+[node name="Textbox_background" type="Sprite2D" parent="."]
+position = Vector2(580, 339)
+scale = Vector2(0.50989586, 0.52592593)
+texture = ExtResource("4_5ln03")
+
+[node name="Textbox_text" type="RichTextLabel" parent="Textbox_background"]
+offset_left = -806.04694
+offset_top = 174.92958
+offset_right = 792.31866
+offset_bottom = 387.88727
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Name_box" type="Sprite2D" parent="."]
+position = Vector2(210.9375, 332.50003)
+scale = Vector2(0.13326822, 0.18981485)
+texture = ExtResource("4_5ln03")
+
+[node name="Namebox_text" type="RichTextLabel" parent="Name_box"]
+offset_left = -817.4304
+offset_top = 160.68279
+offset_right = 788.35376
+offset_bottom = 418.82916
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 130
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
