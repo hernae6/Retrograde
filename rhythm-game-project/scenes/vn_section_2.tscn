@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://omntr3mex2of"]
+
+[ext_resource type="Script" uid="uid://borplff7ugu5w" path="res://scenes/vn_section_2.gd" id="1_40ybd"]
+
+[node name="vn_section_2" type="Node2D"]
+script = ExtResource("1_40ybd")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Control"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/CanvasLayer"]
+offset_right = 305.0
+offset_bottom = 100.0
+text = "FUCK YOU BUDDY"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

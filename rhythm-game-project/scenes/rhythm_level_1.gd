@@ -22,6 +22,8 @@ func _begin_playblack():
 		await get_tree().create_timer(_difference_play(i)).timeout
 		temp_y_side = music1[i].x
 		_instantiate_new_note(temp_y_side)
+	await get_tree().create_timer(5).timeout	
+	get_tree().change_scene_to_file("res://scenes/vn_section_2.tscn")
 
 func _difference_play(i: int) -> float:
 	var difference
